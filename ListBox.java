@@ -40,8 +40,9 @@ public class ListBox {
 		System.out.println(size);
 		
 		//Select option using sendkeys
-	    WebElement findElement = driver.findElement(By.xpath("(//div[@class='example'])[5]"));
-	    findElement.sendKeys("Selenium");
+	        WebElement findElement = driver.findElement(By.xpath("(//div[@class='example'])[5]/select"));
+	        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	        findElement.sendKeys("Selenium");
 		
 		
 	}
