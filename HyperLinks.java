@@ -33,6 +33,11 @@ public class HyperLinks {
 		
 		driver.navigate().back();
 		
+		//Interact with same link
+		String homePage = driver.findElement(By.linkText("Go to Home Page")).getAttribute("href");
+		driver.navigate().to(homePage);
+		
+		driver.findElement(By.xpath("//img[@alt='Link']")).click();
 		
 		//Find links in page
 		List<WebElement> tagSize = driver.findElements(By.tagName("a"));
